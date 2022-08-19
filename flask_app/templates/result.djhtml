@@ -1,0 +1,21 @@
+{% extends "base.djhtml" %}
+{% block content %}
+  {% if meanings_min %}
+    <table border=1>
+      <thead>
+        <tr>
+          <th>Sno</th>
+          <th>Meaning</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for meaning in meanings_min %}
+          <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ meaning }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+{% endblock content %}
